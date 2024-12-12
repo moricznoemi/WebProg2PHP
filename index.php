@@ -1,30 +1,40 @@
-@@ -0,0 +1,31 @@
-<!DOCTYPE html>
+<?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
+
+<!DOCTYPE HTML>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Védett fajok</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div class="container mb-5">
-        <h1 class="text-center mt-5 mb-5">Missziónk</h1>
-        <p class="mt-5" id="intro-text">Webalkalmazásunkat a Webprogramozás II. kurzus sikeres teljesítéséhez készítettük.</p>
-        <p class="text-muted">Projektünk a magyarországi védett fajokkal foglalkozik.</p>
-        
-        <div class="row mt-5">
-            <div class="col">
-                <h5 class="card-title">Készítették:</h5>
-                <p class="text-muted">Nevek</p>
-                <p class="text-muted">Neumann János Egyetem, Kecskemét</p>
-            </div>
-            <div class="col">
-                <h5 class="card-title">Választott adatbázis:</h5>
-                <p class="text-muted">Védett fajok</p>
-            </div>
-        </div>
-        </div>
-</div>
+<body class="is-preload">
+    <?php include __DIR__ . '/templates/header.php';?>
+
+    <!-- Header -->
+    <div id="header">
+        <span class="logo icon fa-paper-plane"></span>
+        <h1>Védett fajok</h1>
+        <p>Üdvözöljük Magyarország védett fajainak oldalán!</p>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- Include the menu and vedettfajok.php content -->
+        <?php include __DIR__ . '/templates/vedett_fajok-tartalom.php';?>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
