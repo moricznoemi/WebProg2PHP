@@ -1,0 +1,32 @@
+input {
+    width: 100% !important;
+}
+
+#addNew {
+    margin-bottom: 0.75em;
+    font-size: 0.6em;
+}
+
+table {
+    th, td {
+        text-align: center !important;
+    }
+
+    button.icon {
+        border: none;
+        background-color: transparent;
+        font-size: 1em;
+    }
+
+    .edit {
+        color: blue;
+    }
+
+    .delete {
+        color: red;
+    }
+}
+
+table.default tbody tr:hover {
+    background: rgba(200, 200, 200, 0.75);
+}

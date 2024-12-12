@@ -1,0 +1,12 @@
+input:not([readonly]):not([type="submit"]), select, select:focus {
+    background-image: none;
+    background-color: #fff;
+}
+
+input[readonly] {
+    cursor: not-allowed;
+}
+
+input[type="submit"] {
+    margin-top: 1em;
+}
